@@ -9,6 +9,7 @@ import type { Dictionary } from "@/lib/i18n/en";
 import { SmartImage } from "./ui/SmartImage";
 import { MagneticButton } from "./ui/MagneticButton";
 import { RevealLines } from "./ui/RevealLines";
+import { Itinerary } from "./Itinerary";
 
 type Journey = Dictionary["journeys"]["golf"];
 
@@ -119,6 +120,8 @@ export function JourneyBlock({ journey, number, image, side, tone }: Props) {
           </MagneticButton>
         </div>
       </div>
+
+      <Itinerary days={journey.itinerary} tone={tone} />
     </article>
   );
 }

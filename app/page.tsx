@@ -18,7 +18,7 @@ const structuredData = {
         "@type": "TouristTrip",
         name: "Namibia Golf Escape",
         description:
-          "A 10-day Namibia journey combining golf between red dunes with afternoon game drives. Minimum 3 guests.",
+          "A 14-day Namibia journey combining golf between red dunes with afternoon game drives. Minimum 3 guests.",
         touristType: ["Golfers", "Luxury travellers"],
         itinerary: { "@type": "Country", name: "Namibia" },
       },
@@ -29,7 +29,7 @@ const structuredData = {
         "@type": "TouristTrip",
         name: "In Search of the Big Five",
         description:
-          "A 12-day wildlife safari across Namibia, Botswana and Zimbabwe for 3–6 guests.",
+          "An 11-day wildlife safari across Namibia, Botswana and Zimbabwe for 3–6 guests.",
         touristType: ["Safari travellers", "Wildlife enthusiasts"],
         itinerary: {
           "@type": "ItemList",

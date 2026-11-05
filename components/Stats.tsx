@@ -9,7 +9,7 @@ const EASE = [0.16, 1, 0.3, 1] as const;
 // Figures are fixed; only their labels are translated.
 const FIGURES = [
   { value: 3, suffix: "" },
-  { value: 12, suffix: "" },
+  { value: 11, suffix: "" },
   { value: 5, suffix: "+" },
   { value: 1, suffix: "" },
 ];
