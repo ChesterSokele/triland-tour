@@ -62,7 +62,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${bodoni.variable} ${instrument.variable} ${plexMono.variable}`}>
+    <html lang="en" data-scroll-behavior="smooth" className={`${bodoni.variable} ${instrument.variable} ${plexMono.variable}`}>
       <body>{children}</body>
     </html>
   );

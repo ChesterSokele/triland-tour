@@ -6,9 +6,10 @@ import { LangSwitch } from "./ui/LangSwitch";
 export function Footer() {
   const { t } = useI18n();
   const links = [
-    { href: "#journeys", label: t.nav.journeys },
-    { href: "#destinations", label: t.nav.destinations },
-    { href: "#contact", label: t.nav.contact },
+    { href: "/golf-safari", label: t.nav.golfTour },
+    { href: "/three-country-safari", label: t.nav.safariTour },
+    { href: "/#destinations", label: t.nav.destinations },
+    { href: "/#contact", label: t.nav.contact },
   ];
 
   return (

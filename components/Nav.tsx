@@ -1,15 +1,16 @@
 "use client";
 
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from "motion/react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { useI18n } from "@/lib/i18n";
 import { LangSwitch } from "./ui/LangSwitch";
 
 const LINKS = [
-  { href: "#journeys", key: "journeys" },
-  { href: "#destinations", key: "destinations" },
-  { href: "#about", key: "about" },
-  { href: "#contact", key: "contact" },
+  { href: "/golf-safari", key: "golfTour" },
+  { href: "/three-country-safari", key: "safariTour" },
+  { href: "/#destinations", key: "destinations" },
+  { href: "/#contact", key: "contact" },
 ] as const;
 
 const EASE = [0.16, 1, 0.3, 1] as const;
@@ -52,16 +53,16 @@ export function Nav() {
         }`}
       >
         <nav className="shell flex h-18 items-center justify-between gap-6 md:h-20" aria-label="Main">
-          <a href="#top" aria-label={t.nav.home} className="font-display text-[1.05rem] tracking-[0.28em] uppercase">
+          <Link href="/" aria-label={t.nav.home} className="font-display text-[1.05rem] tracking-[0.28em] uppercase">
             Triland<span className="mx-2 inline-block h-1 w-1 -translate-y-1 rounded-full bg-amber align-middle" />Tour
-          </a>
+          </Link>
 
           <ul className="hidden items-center gap-10 lg:flex">
             {LINKS.map((l) => (
               <li key={l.key}>
-                <a href={l.href} className="link-line text-[0.8rem] font-medium tracking-[0.14em] uppercase">
+                <Link href={l.href} className="link-line text-[0.8rem] font-medium tracking-[0.14em] uppercase">
                   {t.nav[l.key]}
-                </a>
+                </Link>
               </li>
             ))}
           </ul>

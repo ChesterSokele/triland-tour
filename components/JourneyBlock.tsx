@@ -16,6 +16,8 @@ type Journey = Dictionary["journeys"]["golf"];
 type Props = {
   journey: Journey;
   number: string;
+  /** The journey's own page. */
+  href: string;
   image: ImageKey;
   /** Which side the photograph sits on (desktop). */
   side: "left" | "right";
@@ -24,7 +26,7 @@ type Props = {
 
 const EASE = [0.16, 1, 0.3, 1] as const;
 
-export function JourneyBlock({ journey, number, image, side, tone }: Props) {
+export function JourneyBlock({ journey, number, href, image, side, tone }: Props) {
   const { t } = useI18n();
   const reduce = useReducedMotion();
   const ref = useRef<HTMLElement>(null);
@@ -114,10 +116,13 @@ export function JourneyBlock({ journey, number, image, side, tone }: Props) {
           ))}
         </ul>
 
-        <div className="mt-10">
-          <MagneticButton href={mailto(journey.subject)} variant={dark ? "solid" : "dark"}>
-            {t.journeys.enquire}
+        <div className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">
+          <MagneticButton href={href} variant={dark ? "solid" : "dark"}>
+            {t.journeys.viewTour}
           </MagneticButton>
+          <a href={mailto(journey.subject)} className={`label link-line ${dim}`}>
+            {t.journeys.enquire}
+          </a>
         </div>
       </div>
 

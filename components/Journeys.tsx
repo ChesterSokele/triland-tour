@@ -3,6 +3,7 @@
 import { motion, useReducedMotion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import { useI18n } from "@/lib/i18n";
+import { TOURS } from "@/lib/tours";
 import { JourneyBlock } from "./JourneyBlock";
 import { GolfFeature } from "./GolfFeature";
 import { SafariFeature } from "./SafariFeature";
@@ -44,14 +45,14 @@ export function Journeys() {
           </h2>
           <span className="label text-ink-dim">02</span>
         </div>
-        <JourneyBlock journey={t.journeys.golf} number="01" image="golfJourney" side="left" tone="light" />
+        <JourneyBlock journey={t.journeys.golf} number="01" href={TOURS.golf.path} image="golfJourney" side="left" tone="light" />
         <GolfFeature />
       </div>
 
       <Dusk />
 
       <div className="bg-charcoal text-bone">
-        <JourneyBlock journey={t.journeys.safari} number="02" image="safariJourney" side="right" tone="dark" />
+        <JourneyBlock journey={t.journeys.safari} number="02" href={TOURS.safari.path} image="safariJourney" side="right" tone="dark" />
         <SafariFeature />
       </div>
     </section>
