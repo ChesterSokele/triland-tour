@@ -3,21 +3,14 @@ import type { TourImageKey } from "./tourImages";
 
 export type TourId = "golf" | "safari";
 
-type TourDay = {
-  /** Picture of what you do that day. */
-  activity: TourImageKey;
-  /** Picture of where you sleep; omitted on the departure day. */
-  stay?: TourImageKey;
-};
-
 type Tour = {
   /** URL path, also used by the nav and the home page. */
   path: string;
   /** Hero photo, from lib/images.ts. */
   hero: ImageKey;
   guests: { min: number; max?: number };
-  /** One entry per itinerary day, in the same order as the copy in lib/i18n. */
-  days: TourDay[];
+  /** One photo per itinerary day, in the same order as the copy in lib/i18n. */
+  days: TourImageKey[];
 };
 
 export const TOURS: Record<TourId, Tour> = {
@@ -26,20 +19,20 @@ export const TOURS: Record<TourId, Tour> = {
     hero: "golfJourney",
     guests: { min: 3 },
     days: [
-      { activity: "windhoek", stay: "stayWindhoekCountryClub" },
-      { activity: "golfDesert", stay: "stayWindhoekCountryClub" },
-      { activity: "aridRoad", stay: "staySossusQuiverCamp" },
-      { activity: "duneClimb", stay: "staySossusQuiverCamp" },
-      { activity: "flamingos", stay: "stayProteaHotel" },
-      { activity: "coastalGolf", stay: "stayProteaHotel" },
-      { activity: "quadBiking", stay: "stayProteaHotel" },
-      { activity: "inlandRocks", stay: "staySophienhofLodge" },
-      { activity: "brownGolf", stay: "staySophienhofLodge" },
-      { activity: "etoshaZebra", stay: "stayOkaukuejo" },
-      { activity: "etoshaGiraffe", stay: "stayNamutoni" },
-      { activity: "golfFlag", stay: "stayTsumeb" },
-      { activity: "longRoad", stay: "stayWindhoekCountryClub" },
-      { activity: "departure" },
+      "windhoek", // 1
+      "golfDesert", // 2
+      "aridRoad", // 3
+      "duneClimb", // 4
+      "flamingos", // 5
+      "rossmundGolf", // 6
+      "quadBiking", // 7
+      "inlandRocks", // 8
+      "outjo", // 9
+      "etoshaZebra", // 10
+      "etoshaGiraffe", // 11
+      "tsumeb", // 12
+      "windhoekCity", // 13
+      "departure", // 14
     ],
   },
   safari: {
@@ -47,17 +40,17 @@ export const TOURS: Record<TourId, Tour> = {
     hero: "safariJourney",
     guests: { min: 3, max: 6 },
     days: [
-      { activity: "waterberg", stay: "stayWaterberg" },
-      { activity: "etoshaElephant", stay: "stayOkaukuejo" },
-      { activity: "etoshaGame", stay: "stayHalali" },
-      { activity: "giraffeRoad", stay: "stayNamutoni" },
-      { activity: "kavangoAerial", stay: "stayKaisosi" },
-      { activity: "kavangoBoat", stay: "stayMahangu" },
-      { activity: "mahangoElephants", stay: "stayMahangu" },
-      { activity: "borderRoad", stay: "stayTownLodge" },
-      { activity: "chobeBoat", stay: "stayTownLodge" },
-      { activity: "victoriaFalls", stay: "stayIllala" },
-      { activity: "departureSafari" },
+      "waterberg", // 1
+      "etoshaElephant", // 2
+      "etoshaGame", // 3
+      "giraffeRoad", // 4
+      "kavango", // 5
+      "mahangu", // 6
+      "mahangoElephants", // 7
+      "borderRoad", // 8
+      "chobeBoat", // 9
+      "victoriaFalls", // 10
+      "departureSafari", // 11
     ],
   },
 };

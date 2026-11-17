@@ -23,9 +23,9 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
-const title = "Triland Tour | Golf & Safari Journeys Across Southern Africa";
+const title = "Tri-land Tours | Golf & Safari Journeys Across Southern Africa";
 const description =
-  "Discover handcrafted golf and safari journeys across Namibia, Botswana and Zimbabwe with Triland Tour.";
+  "Discover handcrafted golf and safari journeys across Namibia, Botswana and Zimbabwe with Tri-land Tours.";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: "/",
-    siteName: "Triland Tour",
+    siteName: "Tri-land Tours",
     title,
     description,
     locale: "en_GB",

@@ -17,7 +17,7 @@ export function Footer() {
       <div className="shell border-t border-bone/15 py-14 md:py-20">
         <div className="grid gap-12 md:grid-cols-12">
           <div className="md:col-span-6">
-            <p className="font-display text-[clamp(2.2rem,5vw,4rem)] uppercase leading-none tracking-[0.04em]">Triland Tour</p>
+            <p className="font-display text-[clamp(2.2rem,5vw,4rem)] uppercase leading-none tracking-[0.04em]">Tri-land Tours</p>
             <p className="mt-5 max-w-[36ch] text-bone/70">{t.footer.tagline}</p>
           </div>
           <nav aria-label="Footer" className="md:col-span-3">

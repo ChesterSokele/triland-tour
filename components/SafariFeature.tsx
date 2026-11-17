@@ -78,22 +78,6 @@ export function SafariFeature() {
           >
             {t.safariFeature.body}
           </motion.p>
-
-          <ul className="md:col-span-4 md:col-start-9">
-            {t.safariFeature.bigFive.map((animal, i) => (
-              <motion.li
-                key={animal}
-                className="flex items-baseline justify-between border-b border-bone/12 py-3"
-                initial={{ opacity: 0, x: 24 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true, amount: 0.8 }}
-                transition={{ duration: 0.8, ease: EASE, delay: i * 0.08 }}
-              >
-                <span className="font-display text-[1.6rem] italic">{animal}</span>
-                <span className="label text-mist">0{i + 1} / 05</span>
-              </motion.li>
-            ))}
-          </ul>
         </div>
       </div>
 

@@ -14,24 +14,23 @@ import { SmartImage } from "./ui/SmartImage";
 const fill = (s: string, vars: Record<string, string | number>) =>
   s.replace(/\{(\w+)\}/g, (_, k: string) => String(vars[k] ?? ""));
 
-function TourImage({ name, alt, label }: { name: TourImageKey; alt: string; label: string }) {
+function TourImage({ name, alt }: { name: TourImageKey; alt: string }) {
   const [failed, setFailed] = useState(false);
   const image = TOUR_IMAGES[name];
   return (
-    <figure className="relative aspect-[4/3] overflow-hidden" style={{ background: image.fallback }}>
+    <figure className="relative aspect-[16/10] overflow-hidden" style={{ background: image.fallback }}>
       {!failed && (
         <Image
           src={image.src}
           alt={alt}
           fill
-          sizes="(min-width: 1024px) 28vw, (min-width: 768px) 32vw, 90vw"
+          sizes="(min-width: 1024px) 58vw, (min-width: 768px) 64vw, 92vw"
           quality={80}
           loading="lazy"
           className="object-cover"
           onError={() => setFailed(true)}
         />
       )}
-      <figcaption className="label absolute left-3 top-3 bg-night/75 px-2.5 py-1 text-bone">{label}</figcaption>
     </figure>
   );
 }
@@ -73,7 +72,7 @@ export function TourPage({ tour }: { tour: TourId }) {
       return setError(fill(tp.errorGuests, { range }));
     }
 
-    // The email is always written in English for the Triland team, whatever language the page is in.
+    // The email is always written in English for the Tri-land Tours team, whatever language the page is in.
     const enJourney = en.journeys[tour === "golf" ? "golf" : "safari"];
     const lines = enJourney.itinerary.map((d, i) => ({ ...d, kept: selected[i] }));
     const kept = lines.filter((d) => d.kept);
@@ -149,7 +148,7 @@ export function TourPage({ tour }: { tour: TourId }) {
         </div>
 
         <ol className="shell mt-14 md:mt-20">
-          {def.days.map((d, i) => {
+          {def.days.map((image, i) => {
             const text = days[i];
             const kept = selected[i];
             return (
@@ -189,14 +188,11 @@ export function TourPage({ tour }: { tour: TourId }) {
                 </div>
 
                 <div
-                  className={`grid gap-4 transition-[opacity,filter] duration-500 sm:grid-cols-2 md:col-span-8 ${
+                  className={`transition-[opacity,filter] duration-500 md:col-span-8 ${
                     kept ? "" : "opacity-40 grayscale"
                   }`}
                 >
-                  <TourImage name={d.activity} alt={text.text} label={tp.activity} />
-                  {d.stay && text.stay ? (
-                    <TourImage name={d.stay} alt={text.stay} label={tp.accommodation} />
-                  ) : null}
+                  <TourImage name={image} alt={text.text} />
                 </div>
               </li>
             );

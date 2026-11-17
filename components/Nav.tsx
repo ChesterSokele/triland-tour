@@ -54,7 +54,7 @@ export function Nav() {
       >
         <nav className="shell flex h-18 items-center justify-between gap-6 md:h-20" aria-label="Main">
           <Link href="/" aria-label={t.nav.home} className="font-display text-[1.05rem] tracking-[0.28em] uppercase">
-            Triland<span className="mx-2 inline-block h-1 w-1 -translate-y-1 rounded-full bg-amber align-middle" />Tour
+            Tri-land<span className="mx-2 inline-block h-1 w-1 -translate-y-1 rounded-full bg-amber align-middle" />Tours
           </Link>
 
           <ul className="hidden items-center gap-10 lg:flex">

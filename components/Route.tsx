@@ -133,7 +133,7 @@ export function Route() {
                     transition={{ duration: 0.7, ease: EASE }}
                   >
                     <p className="label text-sand">
-                      {country.kicker} · {country.region}
+                      {country.kicker ? `${country.kicker} · ` : ""}{country.region}
                     </p>
                     <h3 className="display mt-3 whitespace-nowrap text-[clamp(3rem,7.4vw,8rem)] uppercase">
                       {country.name}

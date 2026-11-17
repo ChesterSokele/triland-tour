@@ -1,4 +1,4 @@
-# Triland Tour website
+# Tri-land Tours website
 
 Next.js 16 (App Router), Tailwind CSS 4 and Motion.
 

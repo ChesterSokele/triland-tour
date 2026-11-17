@@ -11,14 +11,14 @@ export const en = {
     contact: "Contact",
     openMenu: "Open menu",
     closeMenu: "Close menu",
-    home: "Triland Tour, back to top",
+    home: "Tri-land Tours, back to top",
     golfTour: "Golf Safari",
     safariTour: "3-Country Safari",
   },
   hero: {
-    eyebrow: "Triland Tour · Southern Africa",
+    eyebrow: "Tri-land Tours · Southern Africa",
     lines: ["Two journeys.", "One untamed", "continent."],
-    body: "Handcrafted Namibia itineraries for golfers and safari-goers who want more than a checklist — from red dune fairways to the tracks of the Big Five.",
+    body: "Handcrafted Namibia itineraries for golfers and safari-goers who want more than a checklist — from red dunes to the tracks of the Big Five.",
     primary: "Explore the journeys",
     secondary: "Plan your trip",
     scroll: "Scroll",
@@ -94,7 +94,7 @@ export const en = {
         { day: "7", text: "We explore the area with a morning and an afternoon game drive in Mahango and Bwabwata.", stay: "Mahangu Safari Lodge", board: "DBB" },
         { day: "8", text: "Travel documents ready, we cross the border into Botswana.", stay: "The Town Lodge", board: "DBB" },
         { day: "9", text: "An early game drive in Chobe National Park and an afternoon boat trip on the Chobe River give us the best chance of animal sightings.", stay: "The Town Lodge", board: "DBB" },
-        { day: "10", text: "As the name says: Triland. We cross into Zimbabwe, the third country on our tour, and visit the world wonder that is Victoria Falls.", stay: "Illala Lodge", board: "DBB" },
+        { day: "10", text: "As the name says: Tri-land. We cross into Zimbabwe, the third country on our tour, and visit the world wonder that is Victoria Falls.", stay: "Illala Lodge", board: "DBB" },
         { day: "11", text: "Our time in Africa draws to a close as your guide escorts you to the airport.", stay: "", board: "" },
       ],
     },
@@ -110,7 +110,6 @@ export const en = {
     title: "Follow the tracks.",
     body: "Leave the tar road behind. Track lion, leopard, elephant, buffalo and rhino with guides who read the ground like a map, and move deeper each day: from open plains to river channels to the spray of Victoria Falls.",
     hint: "Move your cursor to search the dark",
-    bigFive: ["Lion", "Leopard", "Elephant", "Buffalo", "Rhino"],
   },
   route: {
     eyebrow: "The route",
@@ -120,8 +119,8 @@ export const en = {
     countries: [
       {
         name: "Namibia",
-        region: "Sossusvlei · Windhoek · Etosha",
-        kicker: "The desert",
+        region: "Windhoek · Sossusvlei · Etosha",
+        kicker: "",
         body: "Red dunes over the Namib, then north to the white salt pan of Etosha, where wildlife gathers at the waterholes.",
         facts: [
           { value: "325 m", label: "Big Daddy dune, Sossusvlei" },
@@ -132,7 +131,7 @@ export const en = {
         name: "Botswana",
         region: "Okavango Delta · Chobe",
         kicker: "The water",
-        body: "The desert gives way to water. Glide through the Okavango by mokoro and watch elephant herds cross the Chobe River at dusk.",
+        body: "The desert gives way to water. Glide through the Okavango by boat and watch elephant herds cross the Chobe River at dusk.",
         facts: [
           { value: "15,000 km²", label: "Okavango Delta at peak flood" },
           { value: "130,000", label: "Elephants in Botswana, Africa's largest population" },
@@ -166,7 +165,7 @@ export const en = {
   },
   footer: {
     tagline: "Golf & Big Five journeys across Namibia, Botswana & Zimbabwe.",
-    rights: "© 2026 Triland Tour",
+    rights: "© 2026 Tri-land Tours",
     backToTop: "Back to top",
   },
   tourPage: {
@@ -178,8 +177,6 @@ export const en = {
     itineraryLead:
       "Each day shows what you'll do and where you'll stay. Keep the whole journey, or remove the days you don't want and we'll price your own version.",
     day: "Day",
-    activity: "The day",
-    accommodation: "Where you stay",
     placeholderNote: "Photographs are illustrative placeholders.",
     removeDay: "Remove this day",
     restoreDay: "Add this day back",

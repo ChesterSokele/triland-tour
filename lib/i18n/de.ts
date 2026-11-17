@@ -12,14 +12,14 @@ export const de: Dictionary = {
     contact: "Kontakt",
     openMenu: "Menü öffnen",
     closeMenu: "Menü schließen",
-    home: "Triland Tour, zurück nach oben",
+    home: "Tri-land Tours, zurück nach oben",
     golfTour: "Golf-Safari",
     safariTour: "3-Länder-Safari",
   },
   hero: {
-    eyebrow: "Triland Tour · Südliches Afrika",
+    eyebrow: "Tri-land Tours · Südliches Afrika",
     lines: ["Zwei Reisen.", "Ein ursprünglicher", "Kontinent."],
-    body: "Maßgeschneiderte Namibia-Reisen für Golfer und Safari-Reisende, die mehr wollen als eine Checkliste — von Fairways zwischen roten Dünen bis zu den Spuren der Big Five.",
+    body: "Maßgeschneiderte Namibia-Reisen für Golfer und Safari-Reisende, die mehr wollen als eine Checkliste — von roten Dünen bis zu den Spuren der Big Five.",
     primary: "Die Reisen entdecken",
     secondary: "Reise planen",
     scroll: "Scrollen",
@@ -95,7 +95,7 @@ export const de: Dictionary = {
         { day: "7", text: "Wir erkunden die Gegend mit einer Pirschfahrt am Morgen und am Nachmittag in Mahango und Bwabwata.", stay: "Mahangu Safari Lodge", board: "DBB" },
         { day: "8", text: "Reisedokumente bereit: Wir überqueren die Grenze nach Botswana.", stay: "The Town Lodge", board: "DBB" },
         { day: "9", text: "Eine frühe Pirschfahrt im Chobe-Nationalpark und eine Bootsfahrt auf dem Chobe am Nachmittag bieten die besten Chancen auf Tierbeobachtungen.", stay: "The Town Lodge", board: "DBB" },
-        { day: "10", text: "Wie der Name sagt: Triland. Wir reisen nach Simbabwe, dem dritten Land unserer Tour, und besuchen das Weltwunder Victoriafälle.", stay: "Illala Lodge", board: "DBB" },
+        { day: "10", text: "Wie der Name sagt: Tri-land. Wir reisen nach Simbabwe, dem dritten Land unserer Tour, und besuchen das Weltwunder Victoriafälle.", stay: "Illala Lodge", board: "DBB" },
         { day: "11", text: "Unsere Zeit in Afrika geht zu Ende, und Ihr Guide begleitet Sie zum Flughafen.", stay: "", board: "" },
       ],
     },
@@ -111,7 +111,6 @@ export const de: Dictionary = {
     title: "Den Spuren folgen.",
     body: "Lassen Sie die Teerstraße hinter sich. Folgen Sie Löwe, Leopard, Elefant, Büffel und Nashorn mit Guides, die den Boden lesen wie eine Karte, und reisen Sie jeden Tag tiefer hinein: von offenen Ebenen über Flussarme bis zur Gischt der Victoriafälle.",
     hint: "Bewegen Sie den Cursor, um die Dunkelheit abzusuchen",
-    bigFive: ["Löwe", "Leopard", "Elefant", "Büffel", "Nashorn"],
   },
   route: {
     eyebrow: "Die Route",
@@ -121,8 +120,8 @@ export const de: Dictionary = {
     countries: [
       {
         name: "Namibia",
-        region: "Sossusvlei · Windhoek · Etosha",
-        kicker: "Die Wüste",
+        region: "Windhoek · Sossusvlei · Etosha",
+        kicker: "",
         body: "Rote Dünen über der Namib, dann nach Norden zur weißen Salzpfanne der Etosha, wo sich die Tiere an den Wasserlöchern sammeln.",
         facts: [
           { value: "325 m", label: "Düne Big Daddy, Sossusvlei" },
@@ -133,7 +132,7 @@ export const de: Dictionary = {
         name: "Botswana",
         region: "Okavango-Delta · Chobe",
         kicker: "Das Wasser",
-        body: "Die Wüste weicht dem Wasser. Gleiten Sie im Mokoro durch das Okavango-Delta und beobachten Sie in der Dämmerung Elefantenherden am Chobe.",
+        body: "Die Wüste weicht dem Wasser. Gleiten Sie im Boot durch das Okavango-Delta und beobachten Sie in der Dämmerung Elefantenherden am Chobe.",
         facts: [
           { value: "15.000 km²", label: "Okavango-Delta bei Höchstflut" },
           { value: "130.000", label: "Elefanten in Botswana, die größte Population Afrikas" },
@@ -167,7 +166,7 @@ export const de: Dictionary = {
   },
   footer: {
     tagline: "Golf- & Big-Five-Reisen durch Namibia, Botswana & Simbabwe.",
-    rights: "© 2026 Triland Tour",
+    rights: "© 2026 Tri-land Tours",
     backToTop: "Nach oben",
   },
   tourPage: {
@@ -179,8 +178,6 @@ export const de: Dictionary = {
     itineraryLead:
       "Jeder Tag zeigt, was Sie erleben und wo Sie übernachten. Behalten Sie die ganze Reise oder streichen Sie Tage, die Sie nicht möchten, und wir kalkulieren Ihre eigene Version.",
     day: "Tag",
-    activity: "Der Tag",
-    accommodation: "Unterkunft",
     placeholderNote: "Die Fotos sind beispielhafte Platzhalter.",
     removeDay: "Diesen Tag entfernen",
     restoreDay: "Diesen Tag wieder hinzufügen",
