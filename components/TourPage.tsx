@@ -38,7 +38,7 @@ function TourImage({ name, alt }: { name: TourImageKey; alt: string }) {
 export function TourPage({ tour }: { tour: TourId }) {
   const { t } = useI18n();
   const def = TOURS[tour];
-  const journey = t.journeys[tour === "golf" ? "golf" : "safari"];
+  const journey = t.journeys[tour];
   const days = journey.itinerary;
   const tp = t.tourPage;
   const formId = useId();
@@ -73,7 +73,7 @@ export function TourPage({ tour }: { tour: TourId }) {
     }
 
     // The email is always written in English for the Tri-land Tours team, whatever language the page is in.
-    const enJourney = en.journeys[tour === "golf" ? "golf" : "safari"];
+    const enJourney = en.journeys[tour];
     const lines = enJourney.itinerary.map((d, i) => ({ ...d, kept: selected[i] }));
     const kept = lines.filter((d) => d.kept);
     const body = [

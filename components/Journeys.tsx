@@ -54,6 +54,7 @@ export function Journeys() {
       <div className="bg-charcoal text-bone">
         <JourneyBlock journey={t.journeys.safari} number="02" href={TOURS.safari.path} image="safariJourney" side="right" tone="dark" />
         <SafariFeature />
+        <JourneyBlock journey={t.journeys.namibia} number="03" href={TOURS.namibia.path} image="namibia" side="left" tone="dark" />
       </div>
     </section>
   );

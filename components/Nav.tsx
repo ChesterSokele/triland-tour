@@ -9,6 +9,7 @@ import { LangSwitch } from "./ui/LangSwitch";
 const LINKS = [
   { href: "/golf-safari", key: "golfTour" },
   { href: "/three-country-safari", key: "safariTour" },
+  { href: "/namibia-complete-route", key: "namibiaTour" },
   { href: "/#destinations", key: "destinations" },
   { href: "/#contact", key: "contact" },
 ] as const;

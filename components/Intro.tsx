@@ -45,7 +45,7 @@ export function Intro() {
               {t.intro.lead}
             </motion.p>
             <div className="mt-12 space-y-5 border-t border-ink/15 pt-8">
-              {[t.intro.fairways, t.intro.wildlife].map((line, i) => (
+              {[t.intro.fairways, t.intro.wildlife, t.intro.route].map((line, i) => (
                 <motion.p
                   key={i}
                   className="flex items-baseline gap-5 font-display text-[1.5rem] italic text-ink-dim md:text-[1.8rem]"

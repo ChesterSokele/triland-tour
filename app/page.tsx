@@ -7,7 +7,7 @@ const structuredData = {
   name: "Tri-land Tours",
   url: SITE_URL,
   email: CONTACT_EMAIL,
-  slogan: "Two journeys. One untamed continent.",
+  slogan: "Three journeys. One untamed continent.",
   description:
     "Handcrafted golf and safari journeys across Namibia, Botswana and Zimbabwe.",
   areaServed: ["Namibia", "Botswana", "Zimbabwe"],
@@ -39,6 +39,17 @@ const structuredData = {
             { "@type": "ListItem", position: 3, item: { "@type": "Country", name: "Zimbabwe" } },
           ],
         },
+      },
+    },
+    {
+      "@type": "Offer",
+      itemOffered: {
+        "@type": "TouristTrip",
+        name: "Namibia Complete Route",
+        description:
+          "A 10-day round trip from Windhoek through the Kalahari, Sossusvlei, Walvis Bay and Etosha National Park.",
+        touristType: ["Safari travellers", "Landscape lovers"],
+        itinerary: { "@type": "Country", name: "Namibia" },
       },
     },
   ],

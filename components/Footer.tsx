@@ -8,6 +8,7 @@ export function Footer() {
   const links = [
     { href: "/golf-safari", label: t.nav.golfTour },
     { href: "/three-country-safari", label: t.nav.safariTour },
+    { href: "/namibia-complete-route", label: t.nav.namibiaTour },
     { href: "/#destinations", label: t.nav.destinations },
     { href: "/#contact", label: t.nav.contact },
   ];

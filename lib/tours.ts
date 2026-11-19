@@ -1,7 +1,7 @@
 import type { ImageKey } from "./images";
 import type { TourImageKey } from "./tourImages";
 
-export type TourId = "golf" | "safari";
+export type TourId = "golf" | "safari" | "namibia";
 
 type Tour = {
   /** URL path, also used by the nav and the home page. */
@@ -51,6 +51,23 @@ export const TOURS: Record<TourId, Tour> = {
       "chobeBoat", // 9
       "victoriaFalls", // 10
       "departureSafari", // 11
+    ],
+  },
+  namibia: {
+    path: "/namibia-complete-route",
+    hero: "namibia",
+    guests: { min: 3 },
+    days: [
+      "windhoek", // 1
+      "aridRoad", // 2 Kalahari
+      "inlandRocks", // 3 scenic drive to Sesriem
+      "duneClimb", // 4 Sossusvlei
+      "quadBiking", // 5 coast
+      "flamingos", // 6 Walvis Bay
+      "etoshaZebra", // 7
+      "etoshaGiraffe", // 8
+      "windhoekCity", // 9
+      "departure", // 10
     ],
   },
 };
