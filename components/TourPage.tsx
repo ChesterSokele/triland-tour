@@ -36,7 +36,7 @@ function TourImage({ name, alt }: { name: TourImageKey; alt: string }) {
 }
 
 export function TourPage({ tour }: { tour: TourId }) {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
   const def = TOURS[tour];
   const journey = t.journeys[tour];
   const days = journey.itinerary;
@@ -112,7 +112,7 @@ export function TourPage({ tour }: { tour: TourId }) {
         <SmartImage name={def.hero} sizes="100vw" preload />
         <div aria-hidden="true" className="absolute inset-0 bg-[linear-gradient(180deg,rgba(16,14,12,0.55)_0%,rgba(16,14,12,0.2)_40%,rgba(16,14,12,0.88)_100%)]" />
         <div className="shell relative pb-14 pt-40 md:pb-20">
-          <Link href="/" className="label link-line mb-8 inline-flex items-center gap-2 text-amber">
+          <Link href={href("/")} className="label link-line mb-8 inline-flex items-center gap-2 text-amber">
             <span aria-hidden="true">←</span> {tp.back}
           </Link>
           <p className="label mb-5 text-amber">

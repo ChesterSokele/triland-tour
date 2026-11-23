@@ -2,7 +2,7 @@
 
 import { MotionConfig, motion } from "motion/react";
 import type { ReactNode } from "react";
-import { I18nProvider, useI18n } from "@/lib/i18n";
+import { I18nProvider, useI18n, type Lang } from "@/lib/i18n";
 import { Nav } from "./Nav";
 import { Footer } from "./Footer";
 import { ScrollProgress } from "./ui/ScrollProgress";
@@ -30,10 +30,10 @@ function Frame({ children }: { children: ReactNode }) {
 }
 
 /** Shared chrome (language, nav, footer) for the inner pages. The home page builds its own in Site.tsx. */
-export function PageShell({ children }: { children: ReactNode }) {
+export function PageShell({ lang, children }: { lang: Lang; children: ReactNode }) {
   return (
     <MotionConfig reducedMotion="user">
-      <I18nProvider>
+      <I18nProvider lang={lang}>
         <Frame>{children}</Frame>
       </I18nProvider>
     </MotionConfig>

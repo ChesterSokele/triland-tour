@@ -1,9 +1,10 @@
-import { Site } from "@/components/Site";
 import { CONTACT_EMAIL, SITE_URL } from "@/lib/site";
 
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "TravelAgency",
+  "@id": `${SITE_URL}/#organization`,
+  knowsLanguage: ["en", "de"],
   name: "Tri-land Tours",
   url: SITE_URL,
   email: CONTACT_EMAIL,
@@ -55,14 +56,11 @@ const structuredData = {
   ],
 };
 
-export default function Home() {
+export function HomeSchema() {
   return (
-    <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\\u003c") }}
-      />
-      <Site />
-    </>
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData).replace(/</g, "\u003c") }}
+    />
   );
 }

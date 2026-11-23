@@ -4,7 +4,7 @@ import { useI18n } from "@/lib/i18n";
 import { LangSwitch } from "./ui/LangSwitch";
 
 export function Footer() {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
   const links = [
     { href: "/golf-safari", label: t.nav.golfTour },
     { href: "/three-country-safari", label: t.nav.safariTour },
@@ -25,7 +25,7 @@ export function Footer() {
             <ul className="space-y-1">
               {links.map((l) => (
                 <li key={l.href}>
-                  <a href={l.href} className="link-line inline-flex min-h-11 items-center text-[0.8rem] tracking-[0.14em] uppercase">
+                  <a href={href(l.href)} className="link-line inline-flex min-h-11 items-center text-[0.8rem] tracking-[0.14em] uppercase">
                     {l.label}
                   </a>
                 </li>

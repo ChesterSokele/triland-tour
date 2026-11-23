@@ -17,7 +17,7 @@ const LINKS = [
 const EASE = [0.16, 1, 0.3, 1] as const;
 
 export function Nav() {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
   const { scrollY } = useScroll();
   const [solid, setSolid] = useState(false);
   const [hidden, setHidden] = useState(false);
@@ -54,14 +54,14 @@ export function Nav() {
         }`}
       >
         <nav className="shell flex h-18 items-center justify-between gap-6 md:h-20" aria-label="Main">
-          <Link href="/" aria-label={t.nav.home} className="font-display text-[1.05rem] tracking-[0.28em] uppercase">
+          <Link href={href("/")} aria-label={t.nav.home} className="font-display text-[1.05rem] tracking-[0.28em] uppercase">
             Tri-land<span className="mx-2 inline-block h-1 w-1 -translate-y-1 rounded-full bg-amber align-middle" />Tours
           </Link>
 
           <ul className="hidden items-center gap-10 lg:flex">
             {LINKS.map((l) => (
               <li key={l.key}>
-                <Link href={l.href} className="link-line text-[0.8rem] font-medium tracking-[0.14em] uppercase">
+                <Link href={href(l.href)} className="link-line text-[0.8rem] font-medium tracking-[0.14em] uppercase">
                   {t.nav[l.key]}
                 </Link>
               </li>
@@ -109,7 +109,7 @@ export function Nav() {
               {LINKS.map((l, i) => (
                 <motion.a
                   key={l.key}
-                  href={l.href}
+                  href={href(l.href)}
                   onClick={() => setOpen(false)}
                   className="display block py-2 text-[clamp(2.6rem,11vw,4.5rem)]"
                   initial={{ y: 40, opacity: 0 }}

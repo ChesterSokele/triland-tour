@@ -34,7 +34,7 @@ function Dusk() {
 }
 
 export function Journeys() {
-  const { t } = useI18n();
+  const { t, href } = useI18n();
 
   return (
     <section id="journeys" aria-labelledby="journeys-title">
@@ -45,16 +45,16 @@ export function Journeys() {
           </h2>
           <span className="label text-ink-dim">02</span>
         </div>
-        <JourneyBlock journey={t.journeys.golf} number="01" href={TOURS.golf.path} image="golfJourney" side="left" tone="light" />
+        <JourneyBlock journey={t.journeys.golf} number="01" href={href(TOURS.golf.path)} image="golfJourney" side="left" tone="light" />
         <GolfFeature />
       </div>
 
       <Dusk />
 
       <div className="bg-charcoal text-bone">
-        <JourneyBlock journey={t.journeys.safari} number="02" href={TOURS.safari.path} image="safariJourney" side="right" tone="dark" />
+        <JourneyBlock journey={t.journeys.safari} number="02" href={href(TOURS.safari.path)} image="safariJourney" side="right" tone="dark" />
         <SafariFeature />
-        <JourneyBlock journey={t.journeys.namibia} number="03" href={TOURS.namibia.path} image="namibia" side="left" tone="dark" />
+        <JourneyBlock journey={t.journeys.namibia} number="03" href={href(TOURS.namibia.path)} image="namibia" side="left" tone="dark" />
       </div>
     </section>
   );

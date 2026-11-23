@@ -1,7 +1,7 @@
 "use client";
 
 import { MotionConfig, motion } from "motion/react";
-import { I18nProvider, useI18n } from "@/lib/i18n";
+import { I18nProvider, useI18n, type Lang } from "@/lib/i18n";
 import { Nav } from "./Nav";
 import { Hero } from "./Hero";
 import { Intro } from "./Intro";
@@ -40,10 +40,10 @@ function Page() {
   );
 }
 
-export function Site() {
+export function Site({ lang }: { lang: Lang }) {
   return (
     <MotionConfig reducedMotion="user">
-      <I18nProvider>
+      <I18nProvider lang={lang}>
         <Page />
       </I18nProvider>
     </MotionConfig>

@@ -1,4 +1,6 @@
+import { de } from "@/lib/i18n/de";
 import { en } from "@/lib/i18n/en";
+import { localePath, type Lang } from "@/lib/locale";
 import { SITE_URL } from "@/lib/site";
 import { TOURS, type TourId } from "@/lib/tours";
 
@@ -9,11 +11,13 @@ const COUNTRIES: Record<TourId, string[]> = {
 };
 
 /** TouristTrip + BreadcrumbList + FAQPage JSON-LD for one tour page, built from the English copy. */
-export function TourSchema({ tour }: { tour: TourId }) {
+export function TourSchema({ tour, lang = "en" }: { tour: TourId; lang?: Lang }) {
+  const dict = lang === "de" ? de : en;
   const def = TOURS[tour];
-  const journey = en.journeys[tour];
-  const url = `${SITE_URL}${def.path}`;
-  const days = Number(journey.stats.find((s) => s.label === "Days")?.value);
+  const journey = dict.journeys[tour];
+  const url = `${SITE_URL}${localePath(lang, def.path)}`;
+  const home = `${SITE_URL}${localePath(lang, "/")}`;
+  const days = Number(journey.stats[en.journeys[tour].stats.findIndex((x) => x.label === "Days")].value);
 
   const data = {
     "@context": "https://schema.org",
@@ -24,7 +28,7 @@ export function TourSchema({ tour }: { tour: TourId }) {
         name: journey.title,
         description: journey.body,
         url,
-        inLanguage: ["en", "de"],
+        inLanguage: lang,
         touristType: journey.tags,
         provider: { "@type": "TravelAgency", name: "Tri-land Tours", url: SITE_URL },
         offers: {
@@ -49,13 +53,13 @@ export function TourSchema({ tour }: { tour: TourId }) {
       {
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Tri-land Tours", item: SITE_URL },
+          { "@type": "ListItem", position: 1, name: "Tri-land Tours", item: home },
           { "@type": "ListItem", position: 2, name: journey.title, item: url },
         ],
       },
       {
         "@type": "FAQPage",
-        mainEntity: en.faq.tours[tour].map((f) => ({
+        mainEntity: dict.faq.tours[tour].map((f) => ({
           "@type": "Question",
           name: f.q,
           acceptedAnswer: { "@type": "Answer", text: f.a },
