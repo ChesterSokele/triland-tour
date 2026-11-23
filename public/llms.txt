@@ -1,0 +1,13 @@
+# Tri-land Tours
+
+> Handcrafted golf and safari journeys across Namibia, Botswana and Zimbabwe. Itineraries are day by day, can be customised, and are priced on request. Website available in English and German.
+
+## Journeys
+
+- [Namibia Golf Escape](https://www.trilandtour.com/golf-safari): 14-day round trip from Windhoek combining golf (Windhoek, Walvis Bay, Tsumeb) with the Sossusvlei dunes and Etosha game drives. Minimum 3 guests.
+- [In Search of the Big Five](https://www.trilandtour.com/three-country-safari): 11-day safari through Namibia, Botswana and Zimbabwe: Etosha, Kavango, Chobe and Victoria Falls. 3 to 6 guests.
+- [Namibia Complete Route](https://www.trilandtour.com/namibia-complete-route): 10-day round trip from Windhoek through the Kalahari, Sossusvlei, Walvis Bay and Etosha. Minimum 3 guests.
+
+## Contact
+
+- Email: trilandtours@gmail.com

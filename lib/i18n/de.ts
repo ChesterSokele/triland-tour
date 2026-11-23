@@ -32,7 +32,7 @@ export const de: Dictionary = {
     lead: "Drei Reisen für alle, die das südliche Afrika anders erleben möchten.",
     fairways: "Die eine folgt den Fairways.",
     wildlife: "Die zweite folgt der Tierwelt.",
-    route: "Die dritte folgt ganz Namibia.",
+    route: "Die dritte deckt das Beste von Namibia ab.",
     caption: "Fußspuren auf einem Dünenkamm, Namib-Wüste",
   },
   journeys: {
@@ -202,7 +202,10 @@ export const de: Dictionary = {
     itineraryLabel: "Tag für Tag",
     itineraryTitle: "Ihr Reiseverlauf",
     itineraryLead:
-      "Jeder Tag zeigt, was Sie erleben und wo Sie übernachten. Behalten Sie die ganze Reise oder streichen Sie Tage, die Sie nicht möchten, und wir kalkulieren Ihre eigene Version.",
+      "Jeder Tag zeigt, was Sie erleben und wo Sie übernachten. Manche Tage bilden das Herzstück der Route und sind immer enthalten; andere können Sie streichen, und wir kalkulieren Ihre eigene Version.",
+    itineraryLeadFixed:
+      "Jeder Tag zeigt, was Sie erleben und wo Sie übernachten. Dies ist eine komplette Route: Alle Tage sind enthalten.",
+    included: "In jedem Reiseverlauf enthalten",
     day: "Tag",
     placeholderNote: "Die Fotos sind beispielhafte Platzhalter.",
     removeDay: "Diesen Tag entfernen",
@@ -233,6 +236,30 @@ export const de: Dictionary = {
     errorRequired: "Bitte geben Sie Ihren Namen, Ihre E-Mail-Adresse und die Anzahl der Gäste an.",
     errorGuests: "Bitte prüfen Sie die Anzahl der Gäste ({range}).",
     mailSubject: "Angebotsanfrage: {tour}",
+  },
+  faq: {
+    label: "Gut zu wissen",
+    title: "Häufige Fragen",
+    tours: {
+      golf: [
+        { q: "Wie lange dauert das Namibia Golf Escape?", a: "Es ist eine 14-tägige Rundreise ab Windhoek. Sie werden an Tag 1 am Flughafen abgeholt und an Tag 14 wieder dorthin begleitet." },
+        { q: "Welche Golfplätze gehören dazu?", a: "Sie spielen auf dem Windhoek Golf Course, dem Rossmund Golf Course in Walvis Bay, einem Wüstenplatz (\"Brown Course\") und zum Abschluss in Tsumeb." },
+        { q: "Was gibt es außer Golf zu sehen?", a: "Die roten Dünen von Sossusvlei, die Atlantikküste bei Walvis Bay mit einer Katamaranfahrt und einen ganzen Tag Pirschfahrten im Etosha-Nationalpark." },
+        { q: "Wie viele Gäste können reisen, und wie wird der Preis berechnet?", a: "Die Reise findet ab 3 Gästen statt. Fordern Sie ein Angebot mit Ihren Terminen und der Gruppengröße an; Sie können auch einzelne optionale Tage streichen, dann kalkulieren wir Ihre eigene Version. Gebucht ist erst, wenn Sie bestätigen." },
+      ],
+      safari: [
+        { q: "Wie lange dauert die Safari und welche Länder umfasst sie?", a: "Es ist eine 11-tägige Reise durch Namibia, Botswana und Simbabwe, die am Waterberg beginnt und an den Victoriafällen endet." },
+        { q: "Welche Parks und Höhepunkte sind enthalten?", a: "Der Etosha-Nationalpark, der Kavango, Mahango und Bwabwata, der Chobe-Nationalpark mit einer Bootsfahrt und die Victoriafälle." },
+        { q: "Wie groß ist die Gruppe?", a: "Die Safari ist für 3 bis 6 Gäste ausgelegt. So bleiben Fahrzeug und Lodges persönlich." },
+        { q: "Brauche ich Dokumente für die Grenzübertritte?", a: "Ja. Die Route führt an Tag 8 nach Botswana und an Tag 10 nach Simbabwe, halten Sie Ihre Reisedokumente also bereit. Die Einreisebestimmungen hängen von Ihrer Staatsangehörigkeit ab, bitte prüfen Sie sie vor der Reise." },
+      ],
+      namibia: [
+        { q: "Wie lange dauert die Namibia-Rundreise?", a: "Es ist eine 10-tägige Rundreise, die in Windhoek beginnt und endet." },
+        { q: "Was sind die Höhepunkte?", a: "Die Kalahari, die Dünen von Sossusvlei, Walvis Bay mit einer Katamaranfahrt auf dem Atlantik und der Etosha-Nationalpark." },
+        { q: "Wie viele Gäste können reisen?", a: "Die Reise findet ab 3 Gästen statt." },
+        { q: "Kann die Reiseroute angepasst werden?", a: "Nein. Die Namibia Komplett-Route ist eine feste Route, und alle Tage sind enthalten. Gebucht ist erst, wenn Sie bestätigen." },
+      ],
+    },
   },
   images: {
     hero: "Abgestorbene Kameldornbäume auf der weißen Lehmpfanne des Deadvlei unter einer hohen roten Düne in Namibia",

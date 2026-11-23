@@ -31,7 +31,7 @@ export const en = {
     lead: "Three journeys designed for travellers who want to experience Southern Africa differently.",
     fairways: "One follows the fairways.",
     wildlife: "One follows the wildlife.",
-    route: "One follows the whole of Namibia.",
+    route: "One covers the best highlight of Namibia.",
     caption: "Footprints on a dune crest, Namib Desert",
   },
   journeys: {
@@ -201,7 +201,10 @@ export const en = {
     itineraryLabel: "Day by day",
     itineraryTitle: "Your itinerary",
     itineraryLead:
-      "Each day shows what you'll do and where you'll stay. Keep the whole journey, or remove the days you don't want and we'll price your own version.",
+      "Each day shows what you'll do and where you'll stay. Some days are the heart of the route and always included; others you can remove, and we'll price your own version.",
+    itineraryLeadFixed:
+      "Each day shows what you'll do and where you'll stay. This is a complete route: every day is included.",
+    included: "Included in every itinerary",
     day: "Day",
     placeholderNote: "Photographs are illustrative placeholders.",
     removeDay: "Remove this day",
@@ -232,6 +235,30 @@ export const en = {
     errorRequired: "Please add your name, email address and number of guests.",
     errorGuests: "Please check the number of guests ({range}).",
     mailSubject: "Quote request: {tour}",
+  },
+  faq: {
+    label: "Good to know",
+    title: "Frequently asked questions",
+    tours: {
+      golf: [
+        { q: "How long is the Namibia Golf Escape?", a: "It is a 14-day round trip from Windhoek. You are met at the airport on day 1 and escorted back on day 14." },
+        { q: "Which golf courses are included?", a: "You play at the Windhoek Golf Course, the Rossmund Golf Course at Walvis Bay, a desert \"brown\" course, and finish with a round in Tsumeb." },
+        { q: "What else do we see besides golf?", a: "The red dunes of Sossusvlei, the Atlantic coast at Walvis Bay with a catamaran trip, and a full day of game drives in Etosha National Park." },
+        { q: "How many guests can travel, and how is it priced?", a: "The journey runs for a minimum of 3 guests. Request a quote with your dates and group size; you can also remove some of the optional days and we will price your own version. Nothing is booked until you confirm." },
+      ],
+      safari: [
+        { q: "How long is the safari and which countries does it cover?", a: "It is an 11-day journey through Namibia, Botswana and Zimbabwe, starting at Waterberg and ending at Victoria Falls." },
+        { q: "Which parks and highlights are included?", a: "Etosha National Park, the Kavango River, Mahango and Bwabwata, Chobe National Park with a river boat trip, and Victoria Falls." },
+        { q: "How big is the group?", a: "The safari is designed for 3 to 6 guests, which keeps the vehicle and lodges personal." },
+        { q: "Do I need documents to cross the borders?", a: "Yes. The route crosses into Botswana on day 8 and Zimbabwe on day 10, so have your travel documents ready. Entry requirements depend on your nationality, so please check them before you travel." },
+      ],
+      namibia: [
+        { q: "How long is the Namibia Complete Route?", a: "It is a 10-day round trip that starts and ends in Windhoek." },
+        { q: "What are the highlights?", a: "The Kalahari, the Sossusvlei dunes, Walvis Bay with a catamaran trip on the Atlantic, and Etosha National Park." },
+        { q: "How many guests can travel?", a: "The journey runs for a minimum of 3 guests." },
+        { q: "Can the itinerary be changed?", a: "No. The Namibia Complete Route is a fixed route and every day is included. Nothing is booked until you confirm." },
+      ],
+    },
   },
   images: {
     hero: "Dead camel thorn trees on the white clay pan of Deadvlei, beneath a towering red dune in Namibia",

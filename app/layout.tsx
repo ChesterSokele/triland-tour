@@ -40,14 +40,6 @@ export const metadata: Metadata = {
     description,
     locale: "en_GB",
     alternateLocale: ["de_DE"],
-    images: [
-      {
-        url: "https://images.unsplash.com/photo-1696104613970-fc7f58d1ff39?auto=format&fit=crop&w=1200&h=630&q=80",
-        width: 1200,
-        height: 630,
-        alt: "Deadvlei, Namibia: dead camel thorn trees beneath a red dune",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",

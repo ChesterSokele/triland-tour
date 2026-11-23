@@ -11,6 +11,8 @@ type Tour = {
   guests: { min: number; max?: number };
   /** One photo per itinerary day, in the same order as the copy in lib/i18n. */
   days: TourImageKey[];
+  /** Day numbers (1-based) the guest cannot remove from a custom itinerary. */
+  locked: number[];
 };
 
 export const TOURS: Record<TourId, Tour> = {
@@ -25,7 +27,7 @@ export const TOURS: Record<TourId, Tour> = {
       "duneClimb", // 4
       "flamingos", // 5
       "rossmundGolf", // 6
-      "quadBiking", // 7
+      "seals", // 7
       "inlandRocks", // 8
       "outjo", // 9
       "etoshaZebra", // 10
@@ -34,6 +36,7 @@ export const TOURS: Record<TourId, Tour> = {
       "windhoekCity", // 13
       "departure", // 14
     ],
+    locked: [1, 2, 5, 6, 8, 12, 13],
   },
   safari: {
     path: "/three-country-safari",
@@ -52,6 +55,7 @@ export const TOURS: Record<TourId, Tour> = {
       "victoriaFalls", // 10
       "departureSafari", // 11
     ],
+    locked: [1, 4, 5, 6, 7, 8, 9, 10, 11],
   },
   namibia: {
     path: "/namibia-complete-route",
@@ -69,5 +73,6 @@ export const TOURS: Record<TourId, Tour> = {
       "windhoekCity", // 9
       "departure", // 10
     ],
+    locked: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], // fixed route: no choice
   },
 };

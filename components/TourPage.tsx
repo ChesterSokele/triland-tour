@@ -58,7 +58,12 @@ export function TourPage({ tour }: { tour: TourId }) {
     [def.guests, tp.guestsRange, tp.guestsMin],
   );
 
-  const toggle = (i: number) => setSelected((s) => s.map((v, j) => (j === i ? !v : v)));
+  const isLocked = (i: number) => def.locked.includes(i + 1);
+  const canCustomise = def.days.some((_, i) => !isLocked(i));
+  const toggle = (i: number) => {
+    if (isLocked(i)) return;
+    setSelected((s) => s.map((v, j) => (j === i ? !v : v)));
+  };
   const set = (k: keyof typeof form) => (e: { target: { value: string } }) => {
     setForm((f) => ({ ...f, [k]: e.target.value }));
     setError("");
@@ -143,7 +148,7 @@ export function TourPage({ tour }: { tour: TourId }) {
           <h2 id="itinerary-title" className="display mt-4 text-[clamp(2.2rem,5vw,4.4rem)]">
             {tp.itineraryTitle}
           </h2>
-          <p className="mt-6 max-w-[60ch] text-[1.05rem] leading-relaxed text-ink-dim">{tp.itineraryLead}</p>
+          <p className="mt-6 max-w-[60ch] text-[1.05rem] leading-relaxed text-ink-dim">{canCustomise ? tp.itineraryLead : tp.itineraryLeadFixed}</p>
           <p className="label mt-4 text-ink-dim">{tp.placeholderNote}</p>
         </div>
 
@@ -175,15 +180,20 @@ export function TourPage({ tour }: { tour: TourId }) {
                       )}
                     </p>
                   )}
-                  <button
-                    type="button"
-                    onClick={() => toggle(i)}
-                    aria-pressed={!kept}
-                    className="label mt-6 inline-flex min-h-11 cursor-pointer items-center gap-3 border border-ink/30 px-4 py-2 transition-colors hover:border-dune hover:text-dune"
-                  >
-                    <span aria-hidden="true">{kept ? "−" : "+"}</span>
-                    {kept ? tp.removeDay : tp.restoreDay}
-                  </button>
+                  {canCustomise &&
+                    (isLocked(i) ? (
+                      <p className="label mt-6 text-ink-dim">{tp.included}</p>
+                    ) : (
+                      <button
+                        type="button"
+                        onClick={() => toggle(i)}
+                        aria-pressed={!kept}
+                        className="label mt-6 inline-flex min-h-11 cursor-pointer items-center gap-3 border border-ink/30 px-4 py-2 transition-colors hover:border-dune hover:text-dune"
+                      >
+                        <span aria-hidden="true">{kept ? "−" : "+"}</span>
+                        {kept ? tp.removeDay : tp.restoreDay}
+                      </button>
+                    ))}
                   {!kept && <p className="label mt-3 text-dune">{tp.removed}</p>}
                 </div>
 
@@ -204,7 +214,7 @@ export function TourPage({ tour }: { tour: TourId }) {
           <div className="shell flex flex-wrap items-center justify-between gap-x-8 gap-y-3 py-4">
             <p className="text-[0.95rem]" aria-live="polite">
               <span className="label mr-3 text-dune">{isFull ? tp.fullItinerary : tp.customItinerary}</span>
-              {fill(tp.selection, { n: count, total })}
+              {canCustomise && fill(tp.selection, { n: count, total })}
             </p>
             <div className="flex flex-wrap items-center gap-6">
               {!isFull && (
@@ -230,6 +240,29 @@ export function TourPage({ tour }: { tour: TourId }) {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section id="faq" aria-labelledby="faq-title" className="bg-sand py-24 text-ink md:py-32">
+        <div className="shell grid gap-12 md:grid-cols-12">
+          <div className="md:col-span-5">
+            <p className="label text-dune">{t.faq.label}</p>
+            <h2 id="faq-title" className="display mt-4 text-[clamp(2.2rem,5vw,4.4rem)]">
+              {t.faq.title}
+            </h2>
+          </div>
+          <div className="md:col-span-7">
+            {t.faq.tours[tour].map((f) => (
+              <details key={f.q} className="group border-t border-ink/15 py-5 last:border-b">
+                <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-6 text-[1.15rem] font-medium">
+                  {f.q}
+                  <span aria-hidden="true" className="text-dune transition-transform group-open:rotate-45">+</span>
+                </summary>
+                <p className="mt-3 max-w-[60ch] text-[1.05rem] leading-relaxed text-ink-dim">{f.a}</p>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Quote */}
       <section id="quote" aria-labelledby="quote-title" className="bg-bone py-24 text-ink md:py-36">
         <div className="shell grid gap-14 md:grid-cols-12">
@@ -246,7 +279,8 @@ export function TourPage({ tour }: { tour: TourId }) {
                 {journey.title}
               </p>
               <p className="mt-2 text-ink-dim">
-                {isFull ? tp.fullItinerary : tp.customItinerary} · {fill(tp.selection, { n: count, total })}
+                {isFull ? tp.fullItinerary : tp.customItinerary}
+                {canCustomise && <> · {fill(tp.selection, { n: count, total })}</>}
               </p>
               <a href="#itinerary" className="label link-line mt-4 inline-block text-dune">
                 {tp.itineraryTitle} ↑

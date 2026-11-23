@@ -19,27 +19,25 @@ const COUNTRY_IMAGES: ImageKey[] = ["namibia", "botswana", "zimbabwe"];
 
 /*
   Map projection: plain equirectangular, 40 px per degree.
-  x = (lon − 13.5) × 40, y = (−lat − 15.5) × 40, in a 560 × 420 viewBox.
+  x = (lon − 13.5) × 40, y = (−lat − 15.5) × 40, in a 700 × 420 viewBox.
 */
 const project = (lat: number, lon: number) => ({ x: (lon - 13.5) * 40, y: (-lat - 15.5) * 40 });
 
+// One stop per country: the route runs Namibia, then Botswana, then Zimbabwe.
 const STOPS = [
-  { name: "Sossusvlei", ...project(-24.73, 15.29), country: 0 },
-  { name: "Windhoek", ...project(-22.56, 17.08), country: 0 },
-  { name: "Etosha", ...project(-19.18, 15.92), country: 0 },
-  { name: "Maun", ...project(-19.98, 23.42), country: 1 },
-  { name: "Kasane", ...project(-17.8, 25.15), country: 1 },
-  { name: "Victoria Falls", ...project(-17.93, 25.83), country: 2 },
+  { name: "Namibia", ...project(-21.8, 17.0), country: 0 },
+  { name: "Botswana", ...project(-22.2, 24.0), country: 1 },
+  { name: "Zimbabwe", ...project(-19.2, 29.5), country: 2 },
 ];
 
-const ROUTE =
-  "M71.6 369.2 Q 118 330 143.2 282.4 Q 150 210 96.8 147.2 Q 250 118 396.8 179.2 Q 442 140 466 92 L 493.2 97.2";
+const ROUTE = "M140 252 Q 280 300 420 268 Q 540 240 640 148";
 
 const LATS = [-16, -18, -20, -22, -24];
-const LONS = [14, 16, 18, 20, 22, 24, 26];
+const LONS = [14, 16, 18, 20, 22, 24, 26, 28, 30];
 
-// Share of the route length reached by the end of each country.
-const ROUTE_AT = [0, 0.37, 0.96, 1];
+// Share of the route length drawn at each scroll stop: resting on Namibia, Botswana (52.9% of the path), then Zimbabwe.
+const SCROLL_AT = [0, 1 / 6, 1 / 2, 5 / 6, 1];
+const ROUTE_AT = [0, 0, 0.5286, 1, 1];
 
 export function Route() {
   const { t } = useI18n();
@@ -50,7 +48,7 @@ export function Route() {
   const [marker, setMarker] = useState({ x: STOPS[0].x, y: STOPS[0].y });
 
   const { scrollYProgress } = useScroll({ target: ref, offset: ["start start", "end end"] });
-  const drawn = useTransform(scrollYProgress, [0, 1 / 3, 2 / 3, 1], ROUTE_AT);
+  const drawn = useTransform(scrollYProgress, SCROLL_AT, ROUTE_AT);
   const countries = t.route.countries;
 
   useMotionValueEvent(scrollYProgress, "change", (p) => {
@@ -220,7 +218,7 @@ type MapProps = {
 function RouteMap({ drawn, marker, active, label, compact = false }: MapProps) {
   return (
     <svg
-      viewBox="0 0 560 420"
+      viewBox="0 0 700 420"
       role={label ? "img" : undefined}
       aria-label={label}
       className="h-auto w-full overflow-visible"
@@ -231,7 +229,7 @@ function RouteMap({ drawn, marker, active, label, compact = false }: MapProps) {
             const y = (-lat - 15.5) * 40;
             return (
               <g key={lat}>
-                <line x1="0" x2="560" y1={y} y2={y} />
+                <line x1="0" x2="700" y1={y} y2={y} />
                 <text x="0" y={y - 6} fill="var(--color-bone)" fillOpacity="0.4" stroke="none" fontSize="11" fontFamily="var(--font-mono)">
                   {Math.abs(lat)}°S
                 </text>
@@ -277,17 +275,17 @@ function RouteMap({ drawn, marker, active, label, compact = false }: MapProps) {
               strokeOpacity={reached ? 0 : 0.5}
               style={{ transition: "fill 0.4s" }}
             />
-            {!compact && s.name !== "Kasane" && (
+            {!compact && (
               <text
                 x={s.x + 10}
-                y={s.name === "Victoria Falls" ? s.y - 12 : s.y + 4}
+                y={s.name === "Zimbabwe" ? s.y - 12 : s.y + 4}
                 fill="var(--color-bone)"
                 fillOpacity={reached ? 0.9 : 0.45}
                 fontSize="12"
                 fontFamily="var(--font-mono)"
                 letterSpacing="1.5"
                 style={{ textTransform: "uppercase", transition: "fill-opacity 0.4s" }}
-                textAnchor={s.name === "Victoria Falls" ? "end" : "start"}
+                textAnchor={s.name === "Zimbabwe" ? "end" : "start"}
               >
                 {s.name}
               </text>

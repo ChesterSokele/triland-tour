@@ -25,6 +25,8 @@ export const TOUR_IMAGES = {
   kavango: { src: "/images/kavango.jpg", fallback: WATER },
   mahangu: { src: "/images/mahangu.jpg", fallback: WATER },
 
+  seals: { src: "/images/seals.png", fallback: WATER },
+
   // Unsplash stand-ins
   windhoek: { src: unsplash("1586100810957-e4a1fed8c645"), fallback: SAND },
   golfDesert: { src: unsplash("1709525617656-5498eefc7d03"), fallback: FAIRWAY },
