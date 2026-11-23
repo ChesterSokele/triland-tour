@@ -1,5 +1,5 @@
-// Replace SITE_URL with the production domain before launch (or set NEXT_PUBLIC_SITE_URL).
-export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.trilandtours.com";
+// Canonical production host. Vercel redirects www to this host, so it must match the primary domain in Vercel.
+export const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://trilandtours.com";
 
 export const CONTACT_EMAIL = "trilandtours@gmail.com";
 
