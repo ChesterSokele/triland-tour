@@ -7,8 +7,9 @@ type Key = "home" | TourId;
 const COPY: Record<Lang, Record<Key, { title: string; description: string }>> = {
   en: {
     home: {
-      title: "Tri-land Tours | Golf & Safari Journeys Across Southern Africa",
-      description: "Discover handcrafted golf and safari journeys across Namibia, Botswana and Zimbabwe with Tri-land Tours.",
+      title: "Tri-land Tours | Namibia, Botswana & Zimbabwe Golf & Safari Tours",
+      description:
+        "Tri-land Tours (Triland Tours): handcrafted golf safaris and Big Five safari tours in Namibia, Botswana and Zimbabwe. Day-by-day itineraries, quote on request.",
     },
     golf: {
       title: "Namibia Golf Safari | 14-Day Golf & Game Drive Journey | Tri-land Tours",
@@ -28,8 +29,9 @@ const COPY: Record<Lang, Record<Key, { title: string; description: string }>> = 
   },
   de: {
     home: {
-      title: "Tri-land Tours | Golf- & Safarireisen im südlichen Afrika",
-      description: "Entdecken Sie handverlesene Golf- und Safarireisen durch Namibia, Botswana und Simbabwe mit Tri-land Tours.",
+      title: "Tri-land Tours | Golf- & Safarireisen in Namibia, Botswana & Simbabwe",
+      description:
+        "Tri-land Tours (Triland Tours): individuelle Golfsafaris und Big-Five-Safaris in Namibia, Botswana und Simbabwe. Reiseverlauf Tag für Tag, Angebot auf Anfrage.",
     },
     golf: {
       title: "Namibia Golf-Safari | 14 Tage Golf & Pirschfahrten | Tri-land Tours",

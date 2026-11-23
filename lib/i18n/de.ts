@@ -20,7 +20,7 @@ export const de: Dictionary = {
   hero: {
     eyebrow: "Tri-land Tours · Südliches Afrika",
     lines: ["Drei Reisen.","Ein ursprünglicher", "Kontinent."],
-    body: "Maßgeschneiderte Namibia-Reisen für Golfer und Safari-Reisende, die mehr wollen als eine Checkliste — von roten Dünen bis zu den Spuren der Big Five.",
+    body: "Maßgeschneiderte Golf- und Safarireisen durch Namibia, Botswana und Simbabwe für Reisende, die mehr wollen als eine Checkliste — von roten Dünen bis zu den Spuren der Big Five.",
     primary: "Die Reisen entdecken",
     secondary: "Reise planen",
     scroll: "Scrollen",

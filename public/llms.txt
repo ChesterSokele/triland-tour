@@ -1,5 +1,7 @@
 # Tri-land Tours
 
+Also written Triland Tours, Triland Safaris. Website: https://www.trilandtours.com (English) and https://www.trilandtours.com/de (German).
+
 > Handcrafted golf and safari journeys across Namibia, Botswana and Zimbabwe. Itineraries are day by day, can be customised, and are priced on request. Website available in English and German.
 
 ## Journeys

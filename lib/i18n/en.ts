@@ -19,7 +19,7 @@ export const en = {
   hero: {
     eyebrow: "Tri-land Tours · Southern Africa",
     lines: ["Three journeys.", "One untamed", "continent."],
-    body: "Handcrafted Namibia itineraries for golfers and safari-goers who want more than a checklist — from red dunes to the tracks of the Big Five.",
+    body: "Handcrafted golf and safari tours across Namibia, Botswana and Zimbabwe for travellers who want more than a checklist — from red dunes to the tracks of the Big Five.",
     primary: "Explore the journeys",
     secondary: "Plan your trip",
     scroll: "Scroll",

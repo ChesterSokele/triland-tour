@@ -6,6 +6,7 @@ const structuredData = {
   "@id": `${SITE_URL}/#organization`,
   knowsLanguage: ["en", "de"],
   name: "Tri-land Tours",
+  alternateName: ["Triland Tours", "Triland Safaris", "Tri-land Safaris", "Triland Tour"],
   url: SITE_URL,
   email: CONTACT_EMAIL,
   slogan: "Three journeys. One untamed continent.",
