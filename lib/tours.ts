@@ -66,7 +66,7 @@ export const TOURS: Record<TourId, Tour> = {
       "aridRoad", // 2 Kalahari
       "inlandRocks", // 3 scenic drive to Sesriem
       "duneClimb", // 4 Sossusvlei
-      "quadBiking", // 5 coast
+      "seals", // 5 coast
       "flamingos", // 6 Walvis Bay
       "etoshaZebra", // 7
       "etoshaGiraffe", // 8
