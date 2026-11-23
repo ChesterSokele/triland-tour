@@ -244,7 +244,7 @@ export const de: Dictionary = {
       golf: [
         { q: "Wie lange dauert das Namibia Golf Escape?", a: "Es ist eine 14-tägige Rundreise ab Windhoek. Sie werden an Tag 1 am Flughafen abgeholt und an Tag 14 wieder dorthin begleitet." },
         { q: "Welche Golfplätze gehören dazu?", a: "Sie spielen auf dem Windhoek Golf Course, dem Rossmund Golf Course in Walvis Bay, einem Wüstenplatz (\"Brown Course\") und zum Abschluss in Tsumeb." },
-        { q: "Was gibt es außer Golf zu sehen?", a: "Die roten Dünen von Sossusvlei, die Atlantikküste bei Walvis Bay mit einer Katamaranfahrt und einen ganzen Tag Pirschfahrten im Etosha-Nationalpark." },
+        { q: "Was gibt es außer Golf zu sehen?", a: "Die roten Dünen von Sossusvlei, die Atlantikküste bei Walvis Bay mit einem freien Tag für optionale Ausflüge und einen ganzen Tag Pirschfahrten im Etosha-Nationalpark." },
         { q: "Wie viele Gäste können reisen, und wie wird der Preis berechnet?", a: "Die Reise findet ab 3 Gästen statt. Fordern Sie ein Angebot mit Ihren Terminen und der Gruppengröße an; Sie können auch einzelne optionale Tage streichen, dann kalkulieren wir Ihre eigene Version. Gebucht ist erst, wenn Sie bestätigen." },
       ],
       safari: [

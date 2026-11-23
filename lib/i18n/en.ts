@@ -243,7 +243,7 @@ export const en = {
       golf: [
         { q: "How long is the Namibia Golf Escape?", a: "It is a 14-day round trip from Windhoek. You are met at the airport on day 1 and escorted back on day 14." },
         { q: "Which golf courses are included?", a: "You play at the Windhoek Golf Course, the Rossmund Golf Course at Walvis Bay, a desert \"brown\" course, and finish with a round in Tsumeb." },
-        { q: "What else do we see besides golf?", a: "The red dunes of Sossusvlei, the Atlantic coast at Walvis Bay with a catamaran trip, and a full day of game drives in Etosha National Park." },
+        { q: "What else do we see besides golf?", a: "The red dunes of Sossusvlei, the Atlantic coast at Walvis Bay with a free day for optional excursions, and a full day of game drives in Etosha National Park." },
         { q: "How many guests can travel, and how is it priced?", a: "The journey runs for a minimum of 3 guests. Request a quote with your dates and group size; you can also remove some of the optional days and we will price your own version. Nothing is booked until you confirm." },
       ],
       safari: [
